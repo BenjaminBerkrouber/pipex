@@ -61,26 +61,3 @@ Compilez le projet avec la commande `make`. Cela générera l'exécutable `pipex
 
 
 Cela équivaut à `< file1 cmd1 | cmd2 > file2` dans le shell.
-
-## Implémentation
-
-### `ft_get_path`
-Cette fonction trouve le chemin d'accès complet d'une commande en parcourant les répertoires spécifiés dans la variable d'environnement `PATH`.
-
-### `ft_exec`
-Exécute la commande spécifiée. Elle divise la commande en arguments, trouve le chemin de l'exécutable et exécute la commande en utilisant `execve`.
-
-### `ft_child`
-Gère le processus enfant dans Pipex. Il redirige l'entrée standard depuis le fichier d'entrée, connecte la sortie standard au pipe et exécute la première commande spécifiée.
-
-### `ft_parent`
-Gère le processus parent dans Pipex. Il redirige la sortie standard vers le fichier de sortie, lit l'entrée du pipe et exécute la seconde commande spécifiée.
-
-### `ft_pipex`
-Fonction principale de Pipex. Elle valide les arguments, configure le pipe et crée les processus enfant et parent.
-
-## Dépendances
-- La bibliothèque Libft est utilisée pour diverses fonctions utilitaires.
-
-## Compilation
-Compilez le projet avec la commande `make`. Cela générera l'exécutable `pipex`.# pipex
